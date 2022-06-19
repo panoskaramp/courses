@@ -38,7 +38,7 @@ class bandit:
 def argmaxrand(arr) -> int:
     return rndm.choice(np.flatnonzero(arr == arr.max()))
 
-def experiment():
+def experiment() -> Tuple[int, np.float]:
     bandits = [bandit(p) for p in p_true]
     for i in range(N_trials):
         if epsilon > rndm.random():
