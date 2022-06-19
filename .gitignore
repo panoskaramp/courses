@@ -1,0 +1,6 @@
+# ignore DS_Store across all folders
+**/.DS_Store
+
+# ignore machine_learning_examples
+./machine_learning_examples
+
