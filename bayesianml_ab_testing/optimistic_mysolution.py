@@ -2,7 +2,6 @@
 Solve the multi-arm bandit problem with
 - the "optimistic" algorithm (start with a very high win probability estimate (p_estm))
     - the bandit selected will then get a lower p_estm, and perhaps wont be the max for the next round
-    - need to start all bandits as if they were selected once.
 """
 
 import numpy.random as rndm
