@@ -17,7 +17,7 @@ N_trials = 1000
 epsilon = 0.10
 
 class bandit:
-    def __init__(self, p):
+    def __init__(self, p: float):
         # actual win probability of bandit
         self.p = p
         # estimated probability
@@ -38,7 +38,7 @@ class bandit:
 def argmaxrand(arr) -> int:
     return rndm.choice(np.flatnonzero(arr == arr.max()))
 
-def experiment() -> Tuple[int, np.float]:
+def experiment() -> (int, float):
     bandits = [bandit(p) for p in p_true]
     for i in range(N_trials):
         if epsilon > rndm.random():
