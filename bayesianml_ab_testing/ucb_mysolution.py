@@ -3,7 +3,7 @@ Solve the multi-arm bandit problem with
 - the "upper confidence bound" algorithm
     - the upper confidence bound is P(sample_mean -  true_mean >= t) <= f(t) 
     - f(t) is  a heuristic, ie. 1/t, 1/t**2, e^(-t)
-    - here we use f(t) = 
+    - here we use f(t) = e^(-2*n*t**2)
     - recommended to start all bandits as if they were selected once.
 """
 
