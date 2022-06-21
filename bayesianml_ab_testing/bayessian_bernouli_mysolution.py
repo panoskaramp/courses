@@ -3,7 +3,8 @@ Solve the multi-arm bandit problem with
 - the "bayessian" approach
     - the reward is a bernouli distribution
     - the conjugate prior of it is beta distribution
-    - recommended to start all bandits as if they were selected once.
+    - recommended to start all bandits as if they were selected once
+    - thomson sampling for selection of bandit
 """
 
 import numpy.random as rndm
@@ -44,7 +45,7 @@ def argmaxrand(arr: np.array) -> int:
     """argmax with random selection when max is not unique"""
     return rndm.choice(np.flatnonzero(arr == arr.max()))
 
-def experiment() -> (int, float):
+def experiment() -> (int, int, int):
     bandits = [bandit(p) for p in p_true]
     for i in range(1, N_trials):
         j = argmaxrand(np.array([beta(bndt.a, bndt.b) for bndt in bandits]))
